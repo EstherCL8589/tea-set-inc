@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tset inc</title>
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
    <link rel="stylesheet" type="text/css" href="game.css">    
 </head>
 <body class="antialiased">
-    <div class="game-container bg-gray-800 p-6 md:p-8 rounded-xl shadow-2xl border border-gray-700">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-center mb-6 text-indigo-400">Clicker Empire</h1>
+    <div class="game-container bg-[#e6d8c8] p-6 md:p-8 rounded-xl shadow-2xl ">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-center mb-6 text-blue-500">Teapot Inc!</h1>
 
         <!-- Main Clicker Section -->
         <div class="bg-gray-700 p-5 rounded-lg shadow-inner mb-6 text-center">
@@ -19,37 +19,22 @@
                 Click Me!
             </button>
         </div>
+        
+        <!-- Attempt at making containers side-align -->
+         <div class="mycontainer">
+            <!-- Resource Tab -->
+            <div id="resourceTab" class="bg-[#f5f1e9] p-5 rounded-lg shadow-inner mb-6 text-left">
+                <p class="text-2xl md:text-3xl font-semibold mb-3 text-[#9c7d69] underline">Resources
+                <p class="resourceDisplay">Clay: <span id="clayDisplay" class="text-green-600">0</span></p>
 
-        <!-- Upgrades Section -->
-        <div class="bg-gray-700 p-5 rounded-lg shadow-inner mb-6">
-            <h2 class="text-2xl font-bold mb-4 text-center text-blue-300">Upgrades</h2>
-
-            <!-- Auto-Clicker Upgrade -->
-            <div class="flex flex-col md:flex-row items-center justify-between bg-gray-600 p-4 rounded-lg mb-3 shadow-md">
-                <div class="mb-2 md:mb-0 text-center md:text-left">
-                    <p class="text-xl font-semibold">Auto-Clicker</p>
-                    <p class="text-sm text-gray-300">Generates 1 click per second.</p>
-                </div>
-                <div class="flex items-center">
-                    <p class="text-lg font-medium mr-4">Cost: <span id="autoClickerCostDisplay" class="text-yellow-300">10</span> Clicks</p>
-                    <button id="buyAutoClickerButton" class="bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg shadow-md transition duration-200 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
-                        Buy (<span id="autoClickerLevelDisplay">0</span>)
-                    </button>
-                </div>
             </div>
 
-            <!-- Super Clicker Upgrade -->
-            <div class="flex flex-col md:flex-row items-center justify-between bg-gray-600 p-4 rounded-lg shadow-md">
-                <div class="mb-2 md:mb-0 text-center md:text-left">
-                    <p class="text-xl font-semibold">Super Clicker</p>
-                    <p class="text-sm text-gray-300">Increases manual click power by 1.</p>
-                </div>
-                <div class="flex items-center">
-                    <p class="text-lg font-medium mr-4">Cost: <span id="superClickerCostDisplay" class="text-yellow-300">100</span> Clicks</p>
-                    <button id="buySuperClickerButton" class="bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg shadow-md transition duration-200 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
-                        Buy (<span id="superClickerLevelDisplay">0</span>)
-                    </button>
-                </div>
+            <!-- Middle Box Section with Main Gameplay-->
+             <div id="gameBox" class="bg-[#f5f1e9] p-5 rounded-lg shadow-inner mb-6 text-center">
+            </div>
+            <!-- Upgrades Section -->
+            <div id="upgradeSection" class="bg-[#f5f1e9] p-5 rounded-lg shadow-inner mb-6">
+                <h2 class="text-2xl font-semibold mb-4 text-center text-[#9c7d69] underline">Upgrades</h2>
             </div>
         </div>
 

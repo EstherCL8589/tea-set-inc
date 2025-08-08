@@ -1,11 +1,13 @@
+ @import "https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
+
  /* Custom styles for Inter font and general body styling */
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #1a202c; /* Dark background */
+            font-family: 'Georgia', serif;
+            background-color: #b3a298; /* Dark background */
             color: #e2e8f0; /* Light text */
             display: flex;
-            justify-content: center;
-            align-items: center;
+            /*justify-content: center;*/
+            align-items: top;
             min-height: 100vh;
             margin: 0;
             padding: 1rem; /* Add some padding for smaller screens */
@@ -15,8 +17,37 @@
         /* Responsive adjustments for the game container */
         .game-container {
             width: 100%;
-            max-width: 600px; /* Max width for desktop */
+            max-width: 1200px; /* Max width for desktop */
         }
+
+        /*Float to move boxes side by side */
+        div.mycontainer {
+            width:100%;
+            overflow:auto;
+        }
+        div.mycontainer div {
+            width:33%;  
+            float:left;
+        }
+
+        /*Controls percentage of screen boxes appear*/
+        .mycontainer {
+              display: flex;
+        }
+        #resourceTab {
+            flex-basis: 15%;
+        }
+        #gameBox {
+            flex-basis: 70%;
+        }
+        #upgradeSection {
+            flex-basis: 15%
+        }
+
+        .resourceDisplay {
+            @apply text-[#9c7d69] text-xs md:text-3xl font-medium mb-3;
+        }
+        
 
         /* Custom scrollbar for better aesthetics */
         ::-webkit-scrollbar {
