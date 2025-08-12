@@ -11,26 +11,52 @@
 <body class="antialiased">
     <div class="game-container bg-[#e6d8c8] p-6 md:p-8 rounded-xl shadow-2xl ">
         <h1 class="text-4xl md:text-5xl font-extrabold text-center mb-6 text-blue-500">Teapot Inc!</h1>
-
-        <!-- Main Clicker Section -->
-        <div class="bg-gray-700 p-5 rounded-lg shadow-inner mb-6 text-center">
-            <p class="text-2xl md:text-3xl font-semibold mb-3">Clicks: <span id="clicksDisplay" class="text-green-400">0</span></p>
-            <button id="clickButton" class="bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-200 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75">
-                Click Me!
-            </button>
-        </div>
         
         <!-- Attempt at making containers side-align -->
          <div class="mycontainer">
+
             <!-- Resource Tab -->
             <div id="resourceTab" class="bg-[#f5f1e9] p-5 rounded-lg shadow-inner mb-6 text-left">
                 <p class="text-2xl md:text-3xl font-semibold mb-3 text-[#9c7d69] underline">Resources
-                <p class="resourceDisplay">Clay: <span id="clayDisplay" class="text-green-600">0</span></p>
+                <p class="resourceDisplay text-[#9c7d69] text-xs md:text-3xl font-medium mb-3;">Clay: <span id="clayDisplay" class="text-green-600">0</span></p>
 
             </div>
-
+            
             <!-- Middle Box Section with Main Gameplay-->
-             <div id="gameBox" class="bg-[#f5f1e9] p-5 rounded-lg shadow-inner mb-6 text-center">
+            <!-- Invisible outer box-->
+             <div id="gameBox" class="bg-[#f5f1e9] p-5 rounded-lg shadow-inner mb-6 text-center invisible">
+                
+            <!-- Tabs Bar -->
+             <div id="tabBar" class="tabBar overflow-x-auto overflow-y-hidden whitespace-nowrap bg-[#f5f1e9] p-5 rounded-lg shadow-inner mb-6 text-left visible py-2">
+                <button id="houseTab" class="bg-[#b3a298] hover:bg-[#988981] active:bg-[#82766f] text-white font-bold py-1 px-2 rounded-xl shadow-lg transition duration-200 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#b3a298] focus:ring-opacity-75">
+                      House
+                </button>
+
+                <button id="riverTab" class="bg-[#b3a298] hover:bg-[#988981] active:bg-[#82766f] text-white font-bold py-1 px-2 rounded-xl shadow-lg transition duration-200 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#b3a298] focus:ring-opacity-75">
+                      River
+                </button>
+
+                <button id="forestTab" class="bg-[#b3a298] hover:bg-[#988981] active:bg-[#82766f] text-white font-bold py-1 px-2 rounded-xl shadow-lg transition duration-200 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#b3a298] focus:ring-opacity-75">
+                      Forest
+                </button>
+
+                <button id="townTab" class="bg-[#b3a298] hover:bg-[#988981] active:bg-[#82766f] text-white font-bold py-1 px-2 rounded-xl shadow-lg transition duration-200 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#b3a298] focus:ring-opacity-75">
+                      Town
+                </button>
+
+                <button id="optionsTab" class="bg-[#b3a298] hover:bg-[#988981] active:bg-[#82766f] text-white font-bold py-1 px-2 rounded-xl shadow-lg transition duration-200 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#b3a298] focus:ring-opacity-75">
+                      Options
+                </button>
+             </div>
+
+                <!-- Clay Gathering -->
+             <div class="bg-gray-700 p-5 rounded-lg shadow-inner mb-6 text-center visible">
+                 <p class="text2x1 md:text-lg font-semibold underline mb-2">Riverbank</p>
+                 <p class="text-2xl md:text-sm font-semibold mb-3">You have <span id="clayDisplay" class="text-green-400">0</span> clay</p>
+                    <button id="clickButton" class="bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-bold py-2 px-4 rounded-xl shadow-lg transition duration-200 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75">
+                      Gather Clay
+                </button>
+        </div>
             </div>
             <!-- Upgrades Section -->
             <div id="upgradeSection" class="bg-[#f5f1e9] p-5 rounded-lg shadow-inner mb-6">
@@ -38,11 +64,14 @@
             </div>
         </div>
 
-        <!-- Game Info/Status Section -->
-        <div class="bg-gray-700 p-5 rounded-lg shadow-inner text-center">
-            <h2 class="text-2xl font-bold mb-4 text-center text-purple-300">Game Info</h2>
-            <p class="text-lg mb-2">Clicks per second (CPS): <span id="cpsDisplay" class="font-bold text-teal-300">0</span></p>
-            <p class="text-lg">Click Power: <span id="clickPowerDisplay" class="font-bold text-orange-300">1</span></p>
+        <!-- Logbook -->
+        <div class="logbook overflow-y-auto bg-[#f5f1e9] p-5 rounded-lg shadow-inner text-center">
+            <h2 class="text-2xl font-bold mb-4 text-center text-[#9c7d69] underline">Log</h2>
+            <p class="text-sm mb-2 text-[#50402d]">Entry #1: After a long journey, I arrived with nothing but a half-baked business plan and 
+                the desperate hope that my future customers wouldn't mind that their pots were a little lopsided. My new shop is... well, it's a room. Still, I had a vision for it.
+                One with a roaring kiln, a sales counter waiting for customers, a worktable cluttered with carving knives, and shelves stacked with beautiful teapots. For now, there's
+                just the bubbling brook running behind my 'shop'. Perhaps it could be of use...
+            </p>
         </div>
 
         <!-- Message Box (hidden by default) -->

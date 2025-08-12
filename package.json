@@ -1,0 +1,31 @@
+{
+  "name": "tea-set-inc",
+  "version": "0.1.0",
+  "description": "Teapot-themed incremental game",
+  "main": "game.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.11",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11",
+    "vite": "^7.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EstherCL8589/tea-set-inc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/EstherCL8589/tea-set-inc/issues"
+  },
+  "homepage": "https://github.com/EstherCL8589/tea-set-inc#readme"
+}
